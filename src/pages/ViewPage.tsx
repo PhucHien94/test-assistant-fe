@@ -29,8 +29,8 @@ export default function ViewPage() {
 
     // Publish State
     const [published, setPublished] = useState<boolean>(false);
-    const [publishedAt, setPublishedAt] = useState<string | null>(null);
-    const [publishedBy, setPublishedBy] = useState<string | null>(null);
+    //const [publishedAt, setPublishedAt] = useState<string | null>(null);
+    //const [publishedBy, setPublishedBy] = useState<string | null>(null);
     const [publishing, setPublishing] = useState<boolean>(false);
 
     const [downloading, setDownloading] = useState<boolean>(false);
@@ -64,8 +64,8 @@ export default function ViewPage() {
 
                 // Set publish state
                 setPublished(viewData.published || false);
-                setPublishedAt(viewData.publishedAt);
-                setPublishedBy(viewData.publishedBy);
+                //setPublishedAt(viewData.publishedAt);
+                //setPublishedBy(viewData.publishedBy);
 
                 // Set metadata for header
                 setIssueKey(viewData.issueKey || '');
@@ -152,8 +152,8 @@ export default function ViewPage() {
 
             // Update publish state with response data
             setPublished(res.data.data.published);
-            setPublishedAt(res.data.data.publishedAt);
-            setPublishedBy(res.data.data.publishedBy);
+            //setPublishedAt(res.data.data.publishedAt);
+            //setPublishedBy(res.data.data.publishedBy);
         } catch (err: any) {
             console.error('Failed to publish/unpublish:', err);
             setError(err?.response?.data?.error || 'Failed to update publish status');
