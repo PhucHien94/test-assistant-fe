@@ -2,7 +2,7 @@ import axios from "axios";
 import { useAuthStore } from "../state/auth";
 
 const api = axios.create({
-  baseURL: import.meta.env.VITE_API_BASE_URL || "http://localhost:3000",
+  baseURL: import.meta.env.VITE_PROD_BE_URL || 'http://localhost:3000',
 });
 
 // Before send request
